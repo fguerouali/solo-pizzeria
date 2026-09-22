@@ -4,6 +4,13 @@ services:
     runtime: static
     buildCommand: echo "No build required"
     staticPublishPath: .
+    headers:
+      - path: /
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+      - path: /*.html
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
     envVars:
       - key: SKIP_INSTALL_DEPS
         value: "true"
