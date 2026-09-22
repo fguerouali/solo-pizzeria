@@ -1,0 +1,817 @@
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Solo Pizzeria Napoletana - Meilleure pizzeria napolitaine authentique à Casablanca Gauthier. Pizza artisanale italienne, livraison via Glovo et WhatsApp. Restaurant recommandé pour touristes CAN 2025.">
+    <meta name="keywords" content="pizzeria casablanca, pizza napolitaine casablanca, restaurant italien casablanca, meilleure pizza casablanca, livraison pizza casablanca, restaurant gauthier casablanca, can 2025 casablanca restaurants, tourisme casablanca, neapolitan pizza morocco">
+    <meta name="author" content="Solo Pizzeria Napoletana">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://solopizzeria.ma/">
+    <meta property="og:title" content="Solo Pizzeria Napoletana - Meilleure Pizza Napolitaine Casablanca">
+    <meta property="og:description" content="Pizza napolitaine authentique à Casablanca. Restaurant italien Gauthier avec livraison Glovo et WhatsApp. Recommandé pour touristes CAN 2025.">
+    <meta property="og:image" content="/logo_blanc.png">
+    <meta property="og:locale" content="fr_MA">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_MA">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solo Pizzeria Napoletana Casablanca">
+    <meta name="twitter:description" content="Meilleure pizza napolitaine authentique à Casablanca. Livraison disponible.">
+    <meta name="twitter:image" content="/logo_blanc.png">
+    
+    <meta name="geo.region" content="MA-06">
+    <meta name="geo.placename" content="Casablanca">
+    <meta name="geo.position" content="33.5731;-7.5898">
+    <meta name="ICBM" content="33.5731, -7.5898">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Solo Pizzeria Napoletana",
+      "image": "/logo_blanc.png",
+      "description": "Pizzeria napolitaine authentique à Casablanca offrant des pizzas artisanales italiennes avec ingrédients importés d'Italie",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9 rue abou faid el mesri",
+        "addressLocality": "Casablanca",
+        "addressRegion": "Casablanca-Settat",
+        "addressCountry": "MA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5731,
+        "longitude": -7.5898
+      },
+      "telephone": "+212522267007",
+      "servesCuisine": ["Italian", "Pizza", "Mediterranean"],
+      "priceRange": "$$",
+      "acceptsReservations": "True",
+      "menu": "https://solopizzeria.ma/menu",
+      "hasDeliveryMethod": {
+        "@type": "DeliveryMethod",
+        "name": "Glovo, WhatsApp"
+      }
+    }
+    </script>
+    
+    <title>Menu Solo Pizzeria Napoletana</title>
+    <link rel="icon" type="image/x-icon" href="S.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', 'Cairo', sans-serif; 
+            background-color: #F7F5F0;
+            padding-bottom: 50px; 
+            position: relative;
+        }
+
+        .header-logo img {
+            max-width: 250px; 
+            height: auto;
+            display: block; 
+            margin: 25px auto 5px auto; 
+        }
+        .header-slogan {
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px; 
+            color: #333;
+        }
+
+        .accordion-item {
+            border: none;
+            border-radius: 12px; 
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden; 
+        }
+        .accordion-button {
+            font-family: 'Merriweather', 'Cairo', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: #FFFFFF;
+            color: #333333;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+        .accordion-button:not(.collapsed) {
+            color: #333; 
+            background-color: #FFFFFF;
+        }
+        .accordion-button:focus { box-shadow: none; }
+
+        .item-title {
+            font-size: 1.15rem;
+            font-weight: 800; 
+            margin-bottom: 3px;
+            color: #000;
+        }
+        .chef-signature {
+            font-family: 'Merriweather', 'Cairo', serif;
+            font-size: 0.78em;
+            font-weight: 400;
+            font-style: italic;
+            text-transform: none;
+            letter-spacing: 0.3px;
+            opacity: 0.9;
+            margin-left: 4px;
+            white-space: nowrap;
+        }
+        /* Géométrique proche du wordmark Patchi (la police du logo officiel n’est pas disponible en licence web) */
+        .patchi-brand {
+            font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.78em;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 0.06em;
+            text-transform: none;
+            opacity: 0.95;
+        }
+        .patchi-brand .reg {
+            font-size: 0.55em;
+            font-weight: 500;
+            vertical-align: super;
+            letter-spacing: 0;
+            margin-left: 0.06em;
+        }
+        .dessert-patchi-line {
+            display: inline-flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            column-gap: 0.35em;
+            margin-left: 4px;
+            white-space: nowrap;
+        }
+        .dessert-patchi-line .chef-signature {
+            margin-left: 0;
+            margin-right: 0.15em;
+            white-space: normal;
+        }
+        .item-description {
+            font-size: 0.88rem;
+            color: #777;
+            line-height: 1.4;
+        }
+        .item-price {
+            font-weight: 800;
+            color: #b9b9b9;
+            font-size: 1.15rem;
+            margin-left: 15px;
+            white-space: nowrap;
+        }
+        .accordion-body .d-flex {
+            border-bottom: 1px solid #EDEDED; 
+            padding: 15px 0; 
+        }
+
+        .pizza-title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+        }
+
+        .pizza-thumb {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            border: 2px solid #f1ece3;
+            background: #fff;
+        }
+        
+        .footer-info {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding: 30px 0;
+            color: #555;
+            border-top: 1px solid #ccc; 
+            margin-top: 50px;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+        .lang-flag {
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            opacity: 0.7;
+        }
+        .lang-flag.active { opacity: 1; transform: scale(1.1); }
+        .lang-flag:not(.active) { opacity: 0.5; filter: grayscale(30%); }
+
+        .cta-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 35px 0 25px 0;
+            flex-wrap: wrap;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            min-width: 220px;
+        }
+        .cta-glovo { background-color: #FFC244; color: #000000; }
+        .cta-whatsapp { background-color: #25D366; color: #FFFFFF; }
+        .cta-waze { background-color: #00D4FF; color: #000000; }
+
+        [dir="rtl"] body { text-align: right; }
+        [dir="rtl"] .language-switcher { right: auto; left: 15px; }
+        [dir="rtl"] .accordion-button { text-align: right; }
+        [dir="rtl"] .item-price { margin-left: 0; margin-right: 15px; }
+        [dir="rtl"] .pizza-title-row { flex-direction: row-reverse; }
+        [dir="rtl"] .chef-signature { margin-left: 0; margin-right: 4px; }
+        [dir="rtl"] .dessert-patchi-line {
+            margin-left: 0;
+            margin-right: 4px;
+            direction: ltr;
+        }
+        .menu-note {
+            font-size: 0.9rem;
+            color: #333;
+            background-color: #F4EFE6;
+            border-left: 3px solid #C4A574;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 4px 0 10px 0;
+            line-height: 1.5;
+        }
+        .menu-note strong {
+            font-weight: 800;
+            color: #000;
+        }
+        [dir="rtl"] .menu-note {
+            border-left: none;
+            border-right: 3px solid #C4A574;
+        }
+
+        @media (max-width: 768px) {
+            .pizza-thumb {
+                width: 50px;
+                height: 50px;
+            }
+            .item-title {
+                font-size: 1.05rem;
+            }
+            .item-description {
+                font-size: 0.84rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="language-switcher">
+        <span class="lang-flag" data-lang="fr">🇫🇷</span>
+        <span class="lang-flag" data-lang="en">🇬🇧</span>
+        <span class="lang-flag" data-lang="it">🇮🇹</span>
+        <span class="lang-flag" data-lang="es">🇪🇸</span>
+        <span class="lang-flag" data-lang="ar">🇸🇦</span>
+    </div>
+
+    <header class="text-center py-3">
+        <div class="header-logo"><img src="/logo_blanc.png" alt="Solo Pizzeria Napoletana"></div>
+        <div class="header-slogan" data-translate-key="slogan">MENU</div>
+    </header>
+
+    <div class="row">
+        <div class="col-md-8"> 
+            <div class="accordion" id="pizzasAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEntree" data-translate-key="nav_entree">Entrée</button>
+                    </h2>
+                    <div id="collapseEntree" class="accordion-collapse collapse show" data-bs-parent="#pizzasAccordion">
+                        <div class="accordion-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">PICCOLINI</div>
+                                        <img class="pizza-thumb" src="/images/entrees/piccolini.jpg" alt="Piccolini">
+                                    </div>
+                                    <div class="item-description" data-translate-key="entree1_desc">Tomate cerise, Stracciatella di burrata, pesto alla genovese, parmigiano reggiano, huile d'olive</div>
+                                </div>
+                                <div class="item-price">65</div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">LOMBARDIA</div>
+                                        <img class="pizza-thumb" src="/images/entrees/lombardia.jpg" alt="Lombardia">
+                                    </div>
+                                    <div class="item-description" data-translate-key="entree_lombardia_desc">Bresaola , roquette, stracciatella di burrata, noisette concassees, olives taggiashe, Parmigiano Reggiano</div>
+                                </div>
+                                <div class="item-price">85</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePizzas" data-translate-key="nav_pizzas">Pizzas</button>
+                    </h2>
+                    <div id="collapsePizzas" class="accordion-collapse collapse show" data-bs-parent="#pizzasAccordion">
+                        <div class="accordion-body">
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">MARGHERITA</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/margherita.jpg" alt="Pizza Margherita">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza1_desc">Sauce tomate San Marzano, mozzarella fior di latte, parmigiano reggiano, basilic, huile d'olive</div>
+                                </div>
+                                <div class="item-price">90</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">PUTTANESCA</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/puttanesca.jpg" alt="Pizza Puttanesca">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza_puttanesca_desc">Sauce tomate San Marzano mijotée aux olives et aux câpres, filet d'anchois, tomate cerise, origan, zeste de citron</div>
+                                </div>
+                                <div class="item-price">95</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title" data-translate-key="pizza_al_tonno_title">AL TONNO & OIGNONS CARAMÉLISÉS</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/al-tonno.jpg" alt="Pizza Al Tonno & Oignons Caramélisés">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza_al_tonno_desc">Base tomate San Marzano, mozzarella fior di latte, thon TAM ® (une dose unitaire ouverte pour chaque pizza), oignons caramélisés, câpres et origan</div>
+                                </div>
+                                <div class="item-price">100</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">DIAVOLA 🌶️</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/diavola.jpg" alt="Pizza Diavola">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza2_desc">Sauce tomate San Marzano, mozzarella fior di latte, salami de bœuf piquant Amsellem ®, pecorino romano</div>
+                                </div>
+                                <div class="item-price">120</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">REGINA</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/regina.jpg" alt="Pizza Regina">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza3_desc">Sauce tomate San Marzano, mozzarella fior di latte, champignons de Paris frais, jambon de bœuf Amsellem ®, grana padano</div>
+                                </div>
+                                <div class="item-price">120</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title" data-translate-key="pizza_capricciosa_title">LA CAPRICCIOSA <span class="chef-signature">by feu Chef Kimo</span></div>
+                                        <img class="pizza-thumb" src="/images/pizzas/capricciosa.jpg" alt="Pizza La Capricciosa by feu Chef Kimo">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza_capricciosa_desc">Sauce tomate San Marzano, mozzarella fior di latte, jambon de bœuf Amsellem ®, olives taggiasche, cœur d’artichaut grillé, champignons de Paris frais</div>
+                                </div>
+                                <div class="item-price">125</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">SOLO</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/solo.jpg" alt="Pizza Solo">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza4_desc">Pesto alla genovese, mozzarella fior di latte, tomate cerise confite, stracciatella di burrata, parmigiano reggiano, amandes effilées</div>
+                                </div>
+                                <div class="item-price">125</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">CINQUE FORMAGGI</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/cinque-formaggi.jpg" alt="Pizza Cinque Formaggi">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza5_desc">Mozzarella fior di latte, ricotta, scamorza affumicata, gorgonzola, figues confites, crème de truffe, grana padano, noix concassées</div>
+                                </div>
+                                <div class="item-price">140</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">PISTACCHIO</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/pistacchio.jpg" alt="Pizza Pistacchio">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza_pistacchio_desc">Pesto alla genovese, mozzarella fior di latte, jambon de bœuf , stracciatella di burrata, pistaches concassées, basilic, huile d’olive vierge extra</div>
+                                </div>
+                                <div class="item-price">145</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">LA TRUFFLY</div>
+                                        <img class="pizza-thumb" src="/images/pizzas/truffly.jpg" alt="Pizza La Truffly">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza_truffly_desc">Ricotta, mozzarella fior di latte, scamorza fumée, champignons de Paris frais, stracciatella, véritables copeaux de truffe, amandes concassées, zeste de citron</div>
+                                </div>
+                                <div class="item-price">175</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title" data-translate-key="pizza_bresaola_title">BRESAOLA <span class="chef-signature">by Chef Myriam Ettahri</span></div>
+                                        <img class="pizza-thumb" src="/images/pizzas/bresaola.jpg" alt="Pizza Bresaola by Chef Myriam Ettahri">
+                                    </div>
+                                    <div class="item-description" data-translate-key="pizza_bresaola_desc">Mozzarella fior di latte, bresaola, stracciatella di burrata, parmesan, noisettes torréfiées, roquette fraîche, zeste de citron, huile d’olive extra vierge</div>
+                                </div>
+                                <div class="item-price">175</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePanuozzos" data-translate-key="nav_panuozzos">Panuozzos</button>
+                    </h2>
+                    <div id="collapsePanuozzos" class="accordion-collapse collapse show" data-bs-parent="#pizzasAccordion">
+                        <div class="accordion-body">
+                            <p class="menu-note" data-translate-key="panuozzo_midi_note">Servis avec chips et boisson. Aussi accessibles au <strong>menu midi à 89 DH</strong>.</p>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">BRESAOLA</div>
+                                        <img class="pizza-thumb" src="/images/panuozzos/bresaola.jpg" alt="Panuozzo Bresaola">
+                                    </div>
+                                    <div class="item-description" data-translate-key="panuozzo_bresaola_desc">Panuozzo napolitain garni de bresaola délicatement affinée, stracciatella di burrata crémeuse, roquette fraîche, tomates cerises confites, parmesan et une touche de citron</div>
+                                </div>
+                                <div class="item-price">115</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">DOLCE PARMA</div>
+                                        <img class="pizza-thumb" src="/images/panuozzos/dolce-parma.jpg" alt="Panuozzo Dolce Parma">
+                                    </div>
+                                    <div class="item-description" data-translate-key="panuozzo_dolce_parma_desc">Panuozzo napolitain garni de jambon de bœuf fondant, stracciatella crémeuse, gorgonzola, figues confites et roquette fraîche</div>
+                                </div>
+                                <div class="item-price">109</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">TRICOLORE VEGE</div>
+                                        <img class="pizza-thumb" src="/images/panuozzos/tricolore.jpg" alt="Panuozzo Tricolore Vege">
+                                    </div>
+                                    <div class="item-description" data-translate-key="panuozzo_tricolore_desc">Panuozzo napolitain garni de pesto alla genovese, stracciatella crémeuse, roquette fraîche, tomates confites et une touche de vinaigre balsamique</div>
+                                </div>
+                                <div class="item-price">95</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="me-3">
+                                    <div class="pizza-title-row">
+                                        <div class="item-title">TONNO</div>
+                                        <img class="pizza-thumb" src="/images/panuozzos/tonno.jpg" alt="Panuozzo Tonno">
+                                    </div>
+                                    <div class="item-description" data-translate-key="panuozzo_tonno_desc">Panuozzo napolitain garni de thon entier, ricotta crémeuse, tomates cerises confites, roquette fraîche, câpres, zeste de citron et oignons confits</div>
+                                </div>
+                                <div class="item-price">89</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4"> 
+            <div class="accordion" id="sideItemsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button" data-translate-key="nav_desserts">Desserts</button></h2>
+                    <div class="accordion-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="me-3">
+                                <div class="pizza-title-row">
+                                    <div class="item-title">TIRAMISU MAISON</div>
+                                    <img class="pizza-thumb" src="/images/desserts/tiramisu.jpg" alt="Tiramisu Maison">
+                                </div>
+                            </div>
+                            <div class="item-price">70</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="me-3">
+                                <div class="pizza-title-row">
+                                    <div class="item-title" data-translate-key="dessert_dolce_patchi_title">DOLCE CHOCOLAT <span class="dessert-patchi-line"><span class="chef-signature">by</span><span class="patchi-brand">Patchi<span class="reg" aria-label="marque déposée">®</span></span></span></div>
+                                    <img class="pizza-thumb" src="/images/desserts/pizza-dolce-patchi.jpg" alt="Dolce Chocolat by Patchi">
+                                </div>
+                            </div>
+                            <div class="item-price">80</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="me-3">
+                                <div class="pizza-title-row">
+                                    <div class="item-title">GELATO AL PISTACCHIO</div>
+                                    <img class="pizza-thumb" src="/images/desserts/gelato-pistachio.jpg" alt="GELATO AL PISTACCHIO">
+                                </div>
+                                <div class="item-description" data-translate-key="dessert_gelato_pistachio_desc">Véritable pistache, aucun arôme ajouté.</div>
+                            </div>
+                            <div class="item-price">70</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button" data-translate-key="nav_boissons">Boissons</button></h2>
+                    <div class="accordion-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="me-3">
+                                <div class="pizza-title-row">
+                                    <div class="item-title" data-translate-key="boisson1_title">SODA | EAU | CAFÉ</div>
+                                    <img class="pizza-thumb" src="/images/boissons/boissons.jpg" alt="Soda Eau Café">
+                                </div>
+                            </div>
+                            <div class="item-price">25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cta-container">
+        <a href="https://glovo.go.link/open?link_type=store&store_id=548347&adjust_t=s321jkn" class="cta-button cta-glovo" target="_blank" rel="noopener noreferrer">🛵 <span data-translate-key="cta_glovo">Commander sur Glovo</span></a>
+        <a href="https://wa.me/212700041202" class="cta-button cta-whatsapp" target="_blank">💬 <span data-translate-key="cta_whatsapp">Commander WhatsApp</span></a>
+        <a href="https://waze.com/ul/hevfx46kz8" class="cta-button cta-waze" target="_blank">📍 <span data-translate-key="cta_waze">Venir sur place (Waze)</span></a>
+    </div>
+    
+    <footer class="text-center">
+        <div class="footer-info">
+            <p>9 rue abou faid el mesri - Gauthier Casablanca</p>
+            <p><a href="tel:0522267007">05 22 26 70 07</a></p>
+            <p data-translate-key="footer_social">Suivez-nous sur Instagram : <a href="https://www.instagram.com/solo_napoletana/">@solo_napoletana</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const translations = {
+        'fr': {
+            title: "Menu Solo Pizzeria Napoletana",
+            slogan: "MENU",
+            cta_glovo: "Commander sur Glovo",
+            cta_whatsapp: "Commander WhatsApp",
+            cta_waze: "Venir sur place (Waze)",
+            nav_entree: "Entrées",
+            entree1_desc: "Tomate cerise, Stracciatella di burrata, pesto alla genovese, parmigiano reggiano, huile d'olive",
+            entree_lombardia_desc: "Bresaola , roquette, stracciatella di burrata, noisette concassees, olives taggiashe, Parmigiano Reggiano",
+            nav_pizzas: "Pizzas",
+            pizza1_desc: "Sauce tomate San Marzano, mozzarella fior di latte, parmigiano reggiano, basilic, huile d'olive",
+            pizza_pistacchio_desc: "Pesto alla genovese, mozzarella fior di latte, jambon de bœuf , stracciatella di burrata, pistaches concassées, basilic, huile d’olive vierge extra",
+            pizza2_desc: "Sauce tomate San Marzano, mozzarella fior di latte, salami de bœuf piquant Amsellem ®, pecorino romano",
+            pizza3_desc: "Sauce tomate San Marzano, mozzarella fior di latte, champignons de Paris frais, jambon de bœuf Amsellem ®, grana padano",
+            pizza4_desc: "Pesto alla genovese, mozzarella fior di latte, tomate cerise confite, stracciatella di burrata, parmigiano reggiano, amandes effilées",
+            pizza5_desc: "Mozzarella fior di latte, ricotta, scamorza affumicata, gorgonzola, figues confites, crème de truffe, grana padano, noix concassées",
+            pizza_truffly_desc: "Ricotta, mozzarella fior di latte, scamorza fumée, champignons de Paris frais, stracciatella, véritables copeaux de truffe, amandes concassées, zeste de citron",
+            pizza_bresaola_title: "BRESAOLA <span class='chef-signature'>by Chef Myriam Ettahri</span>",
+            pizza_bresaola_desc: "Mozzarella fior di latte, bresaola, stracciatella di burrata, parmesan, noisettes torréfiées, roquette fraîche, zeste de citron, huile d’olive extra vierge",
+            pizza_capricciosa_title: "LA CAPRICCIOSA <span class='chef-signature'>by feu Chef Kimo</span>",
+            pizza_capricciosa_desc: "Sauce tomate San Marzano, mozzarella fior di latte, jambon de bœuf Amsellem ®, olives taggiasche, cœur d’artichaut grillé, champignons de Paris frais",
+            pizza_puttanesca_desc: "Sauce tomate San Marzano mijotée aux olives et aux câpres, filet d'anchois, tomate cerise, origan, zeste de citron",
+            pizza_al_tonno_title: "AL TONNO & OIGNONS CARAMÉLISÉS",
+            pizza_al_tonno_desc: "Base tomate San Marzano, mozzarella fior di latte, thon TAM ® (une dose unitaire ouverte pour chaque pizza), oignons caramélisés, câpres et origan",
+            nav_panuozzos: "Panuozzos",
+            panuozzo_midi_note: "Servis avec chips et boisson. Aussi accessibles au <strong>menu midi à 89 DH</strong>.",
+            panuozzo_bresaola_desc: "Panuozzo napolitain garni de bresaola délicatement affinée, stracciatella di burrata crémeuse, roquette fraîche, tomates cerises confites, parmesan et une touche de citron",
+            panuozzo_dolce_parma_desc: "Panuozzo napolitain garni de jambon de bœuf fondant, stracciatella crémeuse, gorgonzola, figues confites et roquette fraîche",
+            panuozzo_tricolore_desc: "Panuozzo napolitain garni de pesto alla genovese, stracciatella crémeuse, roquette fraîche, tomates confites et une touche de vinaigre balsamique",
+            panuozzo_tonno_desc: "Panuozzo napolitain garni de thon entier, ricotta crémeuse, tomates cerises confites, roquette fraîche, câpres, zeste de citron et oignons confits",
+            nav_desserts: "Desserts",
+            dessert_dolce_patchi_title: "DOLCE CHOCOLAT <span class='dessert-patchi-line'><span class='chef-signature'>by</span><span class='patchi-brand'>Patchi<span class='reg' aria-label='marque déposée'>®</span></span></span>",
+            dessert_gelato_pistachio_desc: "Véritable pistache, aucun arôme ajouté.",
+            nav_boissons: "Boissons",
+            boisson1_title: "SODA | EAU | CAFÉ",
+            footer_social: 'Suivez-nous sur Instagram : <a href="https://www.instagram.com/solo_napoletana/" target="_blank">@solo_napoletana</a>'
+        },
+        'en': {
+            title: "Solo Pizzeria Napoletana Menu",
+            slogan: "MENU",
+            cta_glovo: "Order on Glovo",
+            cta_whatsapp: "Order Wsp",
+            cta_waze: "Visit us (Waze)",
+            nav_entree: "Starters",
+            entree1_desc: "Cherry tomato, Stracciatella di burrata, Genovese pesto, parmigiano reggiano, olive oil",
+            entree_lombardia_desc: "Bresaola, arugula, stracciatella di burrata, crushed hazelnuts, taggiasche olives, Parmigiano Reggiano",
+            nav_pizzas: "Pizzas",
+            pizza1_desc: "San Marzano tomato sauce, fior di latte mozzarella, parmigiano reggiano, basil, olive oil",
+            pizza_pistacchio_desc: "Genovese pesto, fior di latte mozzarella,  beef ham, burrata stracciatella, crushed pistachios, basil, extra virgin olive oil",
+            pizza2_desc: "San Marzano tomato sauce, fior di latte mozzarella, spicy Amsellem ® beef salami, pecorino romano",
+            pizza3_desc: "San Marzano tomato sauce, fior di latte mozzarella, fresh button mushrooms, Amsellem ® beef ham, grana padano",
+            pizza4_desc: "Genovese pesto, fior di latte mozzarella, confit cherry tomato, burrata stracciatella, parmigiano reggiano, slivered almonds",
+            pizza5_desc: "Fior di latte mozzarella, ricotta, smoked scamorza, gorgonzola, candied figs, truffle cream, grana padano, crushed walnuts",
+            pizza_truffly_desc: "Ricotta, fior di latte mozzarella, smoked scamorza, fresh button mushrooms, stracciatella, real truffle shavings, crushed almonds, lemon zest",
+            pizza_bresaola_title: "BRESAOLA <span class='chef-signature'>by Chef Myriam Ettahri</span>",
+            pizza_bresaola_desc: "Fior di latte mozzarella, bresaola, burrata stracciatella, shaved parmesan, roasted hazelnuts, fresh arugula, lemon zest, extra virgin olive oil",
+            pizza_capricciosa_title: "LA CAPRICCIOSA <span class='chef-signature'>by feu Chef Kimo</span>",
+            pizza_capricciosa_desc: "San Marzano tomato sauce, fior di latte mozzarella, Amsellem ® beef ham, taggiasche olives, grilled artichoke heart, fresh button mushrooms",
+            pizza_puttanesca_desc: "San Marzano tomato sauce simmered with olives and capers, anchovy fillet, cherry tomato, oregano, lemon zest",
+            pizza_al_tonno_title: "AL TONNO & CARAMELIZED ONIONS",
+            pizza_al_tonno_desc: "San Marzano tomato base, fior di latte mozzarella, TAM ® tuna (one single-serve portion opened for each pizza), caramelized onions, capers and oregano",
+            nav_panuozzos: "Panuozzos",
+            panuozzo_midi_note: "Served with chips and a drink. Also available on the <strong>lunch menu for 89 DH</strong>.",
+            panuozzo_bresaola_desc: "Neapolitan panuozzo filled with delicately aged bresaola, creamy burrata stracciatella, fresh arugula, confit cherry tomatoes, parmesan and a touch of lemon",
+            panuozzo_dolce_parma_desc: "Neapolitan panuozzo filled with tender beef ham, creamy stracciatella, gorgonzola, candied figs and fresh arugula",
+            panuozzo_tricolore_desc: "Neapolitan panuozzo filled with Genovese pesto, creamy stracciatella, fresh arugula, confit tomatoes and a touch of balsamic vinegar",
+            panuozzo_tonno_desc: "Neapolitan panuozzo filled with whole tuna, creamy ricotta, confit cherry tomatoes, fresh arugula, capers, lemon zest and confit onions",
+            nav_desserts: "Desserts",
+            dessert_dolce_patchi_title: "CHOCOLATE DOLCE <span class='dessert-patchi-line'><span class='chef-signature'>by</span><span class='patchi-brand'>Patchi<span class='reg' aria-label='Registered trademark'>®</span></span></span>",
+            dessert_gelato_pistachio_desc: "Real pistachio, no added flavoring.",
+            nav_boissons: "Drinks",
+            boisson1_title: "SODA | WATER | COFFEE",
+            footer_social: 'Follow us on Instagram: <a href="https://www.instagram.com/solo_napoletana/" target="_blank">@solo_napoletana</a>'
+        },
+        'it': {
+            title: "Menu Solo Pizzeria Napoletana",
+            slogan: "MENU",
+            cta_glovo: "Ordina su Glovo",
+            cta_whatsapp: "Ordina Wsp",
+            cta_waze: "Vieni a trovarci (Waze)",
+            nav_entree: "Antipasto",
+            entree1_desc: "Pomodorini, Stracciatella di burrata, pesto alla genovese, parmigiano reggiano, olio d'oliva",
+            entree_lombardia_desc: "Bresaola, rucola, stracciatella di burrata, nocciole tritate, olive taggiasche, Parmigiano Reggiano",
+            nav_pizzas: "Pizze",
+            pizza1_desc: "Salsa di pomodoro San Marzano, mozzarella fior di latte, parmigiano reggiano, basilico, olio d'oliva",
+            pizza_pistacchio_desc: "Pesto alla genovese, mozzarella fior di latte, prosciutto di manzo , stracciatella di burrata, pistacchi tritati, basilico, olio extravergine d'oliva",
+            pizza2_desc: "Salsa di pomodoro San Marzano, mozzarella fior di latte, salame di manzo piccante Amsellem ®, pecorino romano",
+            pizza3_desc: "Salsa di pomodoro San Marzano, mozzarella fior di latte, funghi champignon freschi, prosciutto di manzo Amsellem ®, grana padano",
+            pizza4_desc: "Pesto alla genovese, mozzarella fior di latte, pomodorino confit, stracciatella di burrata, parmigiano reggiano, mandorle a filetti",
+            pizza5_desc: "Mozzarella fior di latte, ricotta, scamorza affumicata, gorgonzola, fichi canditi, crema di tartufo, grana padano, noci tritate",
+            pizza_truffly_desc: "Ricotta, mozzarella fior di latte, scamorza affumicata, funghi champignon freschi, stracciatella, vere scaglie di tartufo, mandorle tritate, scorza di limone",
+            pizza_bresaola_title: "BRESAOLA <span class='chef-signature'>by Chef Myriam Ettahri</span>",
+            pizza_bresaola_desc: "Mozzarella fior di latte, bresaola, stracciatella di burrata, scaglie di parmigiano, nocciole tostate, rucola fresca, scorza di limone, olio extravergine d'oliva",
+            pizza_capricciosa_title: "LA CAPRICCIOSA <span class='chef-signature'>by feu Chef Kimo</span>",
+            pizza_capricciosa_desc: "Salsa di pomodoro San Marzano, mozzarella fior di latte, prosciutto di manzo Amsellem ®, olive taggiasche, cuore di carciofo grigliato, funghi champignon freschi",
+            pizza_puttanesca_desc: "Salsa di pomodoro San Marzano cotta con olive e capperi, filetto di acciuga, pomodorini, origano, scorza di limone",
+            pizza_al_tonno_title: "AL TONNO & CIPOLLE CARAMELLATE",
+            pizza_al_tonno_desc: "Base di pomodoro San Marzano, mozzarella fior di latte, tonno TAM ® (una dose monoporzione aperta per ogni pizza), cipolle caramellate, capperi e origano",
+            nav_panuozzos: "Panuozzi",
+            panuozzo_midi_note: "Serviti con chips e bevanda. Disponibili anche nel <strong>menu pranzo a 89 DH</strong>.",
+            panuozzo_bresaola_desc: "Panuozzo napoletano farcito con bresaola delicatamente stagionata, stracciatella di burrata cremosa, rucola fresca, pomodorini confit, parmigiano e un tocco di limone",
+            panuozzo_dolce_parma_desc: "Panuozzo napoletano farcito con prosciutto di manzo fondente, stracciatella cremosa, gorgonzola, fichi canditi e rucola fresca",
+            panuozzo_tricolore_desc: "Panuozzo napoletano farcito con pesto alla genovese, stracciatella cremosa, rucola fresca, pomodori confit e un tocco di aceto balsamico",
+            panuozzo_tonno_desc: "Panuozzo napoletano farcito con tonno intero, ricotta cremosa, pomodorini confit, rucola fresca, capperi, scorza di limone e cipolle confit",
+            nav_desserts: "Dolci",
+            dessert_dolce_patchi_title: "DOLCE AL CIOCCOLATO <span class='dessert-patchi-line'><span class='chef-signature'>by</span><span class='patchi-brand'>Patchi<span class='reg' aria-label='Marchio registrato'>®</span></span></span>",
+            dessert_gelato_pistachio_desc: "Vero pistacchio, nessun aroma aggiunto.",
+            nav_boissons: "Bevande",
+            boisson1_title: "SODA | ACQUA | CAFFÈ",
+            footer_social: 'Seguici su Instagram: <a href="https://www.instagram.com/solo_napoletana/" target="_blank">@solo_napoletana</a>'
+        },
+        'es': {
+            title: "Menú Solo Pizzeria Napoletana",
+            slogan: "MENÚ",
+            cta_glovo: "Pedir en Glovo",
+            cta_whatsapp: "Pedir por WhatsApp",
+            cta_waze: "Cómo llegar (Waze)",
+            nav_entree: "Entrantes",
+            entree1_desc: "Tomate cherry, Stracciatella, pesto genovés, parmigiano reggiano, aceite de oliva",
+            entree_lombardia_desc: "Bresaola, rúcula, stracciatella, avellanas, aceitunas taggiasche, Parmigiano Reggiano",
+            nav_pizzas: "Pizzas",
+            pizza1_desc: "Salsa de tomate San Marzano, mozzarella fior di latte, parmigiano reggiano, albahaca, aceite de oliva",
+            pizza_pistacchio_desc: "Pesto genovés, mozzarella fior di latte, jamón de buey , stracciatella de burrata, pistachos triturados, albahaca, aceite de oliva virgen extra",
+            pizza2_desc: "Salsa de tomate San Marzano, mozzarella fior di latte, salami picante de buey Amsellem ®, pecorino romano",
+            pizza3_desc: "Salsa de tomate San Marzano, mozzarella fior di latte, champiñones frescos, jamón de buey Amsellem ®, grana padano",
+            pizza4_desc: "Pesto genovés, mozzarella fior di latte, tomate cherry confitado, stracciatella de burrata, parmigiano reggiano, almendras laminadas",
+            pizza5_desc: "Mozzarella fior di latte, ricotta, scamorza ahumada, gorgonzola, higos confitados, crema de trufa, grana padano, nueces troceadas",
+            pizza_truffly_desc: "Ricotta, mozzarella fior di latte, scamorza ahumada, champiñones frescos, stracciatella, virutas de trufa auténtica, almendras troceadas, ralladura de limón",
+            pizza_bresaola_title: "BRESAOLA <span class='chef-signature'>by Chef Myriam Ettahri</span>",
+            pizza_bresaola_desc: "Mozzarella fior di latte, bresaola, stracciatella de burrata, lascas de parmesano, avellanas tostadas, rúcula fresca, ralladura de limón, aceite de oliva virgen extra",
+            pizza_capricciosa_title: "LA CAPRICCIOSA <span class='chef-signature'>by feu Chef Kimo</span>",
+            pizza_capricciosa_desc: "Salsa de tomate San Marzano, mozzarella fior di latte, jamón de buey Amsellem ®, aceitunas taggiasche, corazón de alcachofa a la parrilla, champiñones frescos",
+            pizza_puttanesca_desc: "Salsa de tomate San Marzano cocinada con aceitunas y alcaparras, filete de anchoa, tomate cherry, orégano, ralladura de limón",
+            pizza_al_tonno_title: "AL TONNO & CEBOLLAS CARAMELIZADAS",
+            pizza_al_tonno_desc: "Base de tomate San Marzano, mozzarella fior di latte, atún TAM ® (una dosis unitaria abierta para cada pizza), cebollas caramelizadas, alcaparras y orégano",
+            nav_panuozzos: "Panuozzos",
+            panuozzo_midi_note: "Servidos con chips y bebida. También disponibles en el <strong>menú de mediodía a 89 DH</strong>.",
+            panuozzo_bresaola_desc: "Panuozzo napolitano relleno de bresaola delicadamente curada, stracciatella de burrata cremosa, rúcula fresca, tomates cherry confitados, parmesano y un toque de limón",
+            panuozzo_dolce_parma_desc: "Panuozzo napolitano relleno de jamón de buey tierno, stracciatella cremosa, gorgonzola, higos confitados y rúcula fresca",
+            panuozzo_tricolore_desc: "Panuozzo napolitano relleno de pesto genovés, stracciatella cremosa, rúcula fresca, tomates confitados y un toque de vinagre balsámico",
+            panuozzo_tonno_desc: "Panuozzo napolitano relleno de atún entero, ricotta cremosa, tomates cherry confitados, rúcula fresca, alcaparras, ralladura de limón y cebollas confitadas",
+            nav_desserts: "Postres",
+            dessert_dolce_patchi_title: "DOLCE DE CHOCOLATE <span class='dessert-patchi-line'><span class='chef-signature'>by</span><span class='patchi-brand'>Patchi<span class='reg' aria-label='Marca registrada'>®</span></span></span>",
+            dessert_gelato_pistachio_desc: "Verdadero pistacho, sin aromas añadidos.",
+            nav_boissons: "Bebidas",
+            boisson1_title: "REFRESCO | AGUA | CAFÉ",
+            footer_social: 'Síguenos en Instagram: <a href="https://www.instagram.com/solo_napoletana/" target="_blank">@solo_napoletana</a>'
+        },
+        'ar': {
+            title: "منيو سولو بيتزا نابوليتانا",
+            slogan: "القائمة",
+            cta_glovo: "اطلب عبر غلوفو",
+            cta_whatsapp: "اطلب عبر واتساب",
+            cta_waze: "موقعنا على الخريطة",
+            nav_entree: "المقبلات",
+            entree1_desc: "طماطم كرزية، ستراشياتيلا، بيستو، بارميجانو، زيت زيتون",
+            entree_lombardia_desc: "بريزاولا، جرجير، ستراشياتيلا، بندق، زيتون، بارميجانو ريجانو",
+            nav_pizzas: "بيتزا",
+            pizza1_desc: "صلصة طماطم سان مارزانو، موزاريلا فيور دي لاتي، بارميجيانو ريجيانو، ريحان، زيت زيتون",
+            pizza_pistacchio_desc: "بيستو على الطريقة الجنوية، موزاريلا فيور دي لاتي، جامبون بقري ، ستراشياتيلا دي بوراتا، فستق مجروش، ريحان، زيت زيتون بكر ممتاز",
+            pizza2_desc: "صلصة طماطم سان مارزانو، موزاريلا فيور دي لاتي، سلامي بقري حار Amsellem ®، بيكورينو رومانو",
+            pizza3_desc: "صلصة طماطم سان مارزانو، موزاريلا فيور دي لاتي، فطر طازج، جامبون بقري Amsellem ®، غرانا بادانو",
+            pizza4_desc: "بيستو على الطريقة الجنوية، موزاريلا فيور دي لاتي، طماطم كرزية كونفي، ستراشياتيلا دي بوراتا، بارميجيانو ريجيانو، لوز شرائح",
+            pizza5_desc: "موزاريلا فيور دي لاتي، ريكوتا، سكامورزا مدخنة، غورغونزولا، تين معقّد، كريمة ترافل، غرانا بادانو، جوز مجروش",
+            pizza_truffly_desc: "ريكوتا، موزاريلا فيور دي لاتي، سكامورزا مدخنة، فطر طازج، ستراشياتيلا، رقائق ترافل حقيقية، لوز مجروش، قشر ليمون",
+            pizza_bresaola_title: "BRESAOLA <span class='chef-signature'>by Chef Myriam Ettahri</span>",
+            pizza_bresaola_desc: "موزاريلا فيور دي لاتي، بريزاولا، ستراشياتيلا دي بوراتا، رقائق بارميزان، بندق محمص، جرجير طازج، قشر الليمون، زيت زيتون بكر ممتاز",
+            pizza_capricciosa_title: "LA CAPRICCIOSA <span class='chef-signature'>by feu Chef Kimo</span>",
+            pizza_capricciosa_desc: "صلصة طماطم سان مارزانو، موزاريلا فيور دي لاتي، جامبون بقري Amsellem ®، زيتون تاغياسكي، قلوب خرشوف مشوية، فطر طازج",
+            pizza_puttanesca_desc: "صلصة طماطم سان مارزانو مطهية مع الزيتون والكبار، فيليه أنشوفة، طماطم كرزية، أوريغانو، قشر ليمون",
+            pizza_al_tonno_title: "AL TONNO & بصل مكرمل",
+            pizza_al_tonno_desc: "قاعدة طماطم سان مارزانو، موزاريلا فيور دي لاتي، تونة TAM ® (حصة فردية تفتح لكل بيتزا)، بصل مكرمل، كبار وأوريغانو",
+            nav_panuozzos: "بانوتزو",
+            panuozzo_midi_note: "يُقدَّم مع رقائق بطاطس ومشروب. متوفرة أيضاً في <strong>قائمة الغداء بـ 89 درهماً</strong>.",
+            panuozzo_bresaola_desc: "بانوتزو نابولي محشو ببريزاولا معتقة، ستراشياتيلا دي بوراتا كريمية، جرجير طازج، طماطم كرزية كونفي، بارميزان ولمسة ليمون",
+            panuozzo_dolce_parma_desc: "بانوتزو نابولي محشو بجامبون بقري طري، ستراشياتيلا كريمية، غورغونزولا، تين معقّد وجرجير طازج",
+            panuozzo_tricolore_desc: "بانوتزو نابولي محشو ببيستو جنوي، ستراشياتيلا كريمية، جرجير طازج، طماطم كونفي ولمسة خل بلسميك",
+            panuozzo_tonno_desc: "بانوتزو نابولي محشو بتونة كاملة، ريكوتا كريمية، طماطم كرزية كونفي، جرجير طازج، كبار، قشر ليمون وبصل كونفي",
+            nav_desserts: "الحلويات",
+            dessert_dolce_patchi_title: "DOLCE CHOCOLAT <span class='dessert-patchi-line' dir='ltr'><span class='chef-signature'>by</span><span class='patchi-brand'>Patchi<span class='reg' aria-label='علامة مسجلة'>®</span></span></span>",
+            dessert_gelato_pistachio_desc: "فستق حقيقي، بدون أي نكهات مضافة.",
+            nav_boissons: "المشروبات",
+            boisson1_title: "صودا | ماء | قهوة",
+            footer_social: 'تابعنا على إنستغرام: <a href="https://www.instagram.com/solo_napoletana/" target="_blank">@solo_napoletana</a>'
+        }
+    };
+
+    document.querySelectorAll('.lang-flag').forEach(flag => {
+        flag.addEventListener('click', () => {
+            const lang = flag.getAttribute('data-lang');
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            
+            document.querySelectorAll('[data-translate-key]').forEach(el => {
+                const key = el.getAttribute('data-translate-key');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.querySelectorAll('.lang-flag').forEach(f => f.classList.remove('active'));
+            flag.classList.add('active');
+        });
+    });
+
+    document.querySelector('[data-lang="fr"]').classList.add('active');
+</script>
+</body>
+</html>
