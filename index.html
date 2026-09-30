@@ -69,6 +69,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -283,6 +284,52 @@
             border-left: none;
             border-right: 3px solid #C4A574;
         }
+        .dips-note {
+            margin: 2px 4px 22px 4px;
+            padding: 6px 12px 10px;
+            text-align: center;
+        }
+        .dips-heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.05rem;
+            font-weight: 400;
+            color: #5a4636;
+            margin: 0 0 2px 0;
+            line-height: 1.2;
+        }
+        .dips-hint {
+            font-family: 'Caveat', cursive;
+            font-size: 1.05rem;
+            color: #9a8b7a;
+            margin: 0 0 8px 0;
+            letter-spacing: 0.4px;
+        }
+        .dips-line {
+            font-family: 'Caveat', cursive;
+            font-size: 1.38rem;
+            color: #6a5746;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            max-width: 380px;
+            margin: 0 auto;
+            padding: 1px 8px;
+            font-weight: 500;
+        }
+        .dips-line span:last-child {
+            font-size: 1.15rem;
+            color: #b0a090;
+            margin-left: 18px;
+            white-space: nowrap;
+        }
+        [dir="rtl"] .dips-heading,
+        [dir="rtl"] .dips-hint,
+        [dir="rtl"] .dips-line {
+            font-family: 'Cairo', sans-serif;
+            font-style: italic;
+        }
+        [dir="rtl"] .dips-heading { font-size: 1.35rem; font-style: normal; font-weight: 600; }
+        [dir="rtl"] .dips-line span:last-child { margin-left: 0; margin-right: 18px; }
 
         @media (max-width: 768px) {
             .pizza-thumb {
@@ -479,6 +526,14 @@
                     </div>
                 </div>
 
+                <aside class="dips-note">
+                    <p class="dips-heading" data-translate-key="dips_heading">Dips</p>
+                    <p class="dips-hint" data-translate-key="dips_hint">à ajouter, pour les croûtes</p>
+                    <p class="dips-line"><span data-translate-key="dip_truffe">Crème de truffe noire</span><span>10</span></p>
+                    <p class="dips-line"><span data-translate-key="dip_pesto">Pesto alla genovese</span><span>7</span></p>
+                    <p class="dips-line"><span data-translate-key="dip_ricotta">Crème ricotta</span><span>7</span></p>
+                </aside>
+
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePanuozzos" data-translate-key="nav_panuozzos">Panuozzos</button>
@@ -643,6 +698,11 @@
             pizza_al_tonno_title: "AL TONNO & OIGNONS CARAMÉLISÉS",
             pizza_al_tonno_desc: "Base tomate San Marzano, mozzarella fior di latte, thon TAM ® (une dose unitaire ouverte pour chaque pizza), oignons caramélisés, câpres et origan",
             nav_panuozzos: "Panuozzos",
+            dips_heading: "Dips",
+            dips_hint: "à ajouter, pour les croûtes",
+            dip_truffe: "Crème de truffe noire",
+            dip_pesto: "Pesto alla genovese",
+            dip_ricotta: "Crème ricotta",
             panuozzo_midi_note: "Servis avec chips et boisson. Aussi accessibles au <strong>menu midi à 89 DH</strong>.",
             panuozzo_bresaola_desc: "Panuozzo napolitain garni de bresaola délicatement affinée, stracciatella di burrata crémeuse, roquette fraîche, tomates cerises confites, parmesan et une touche de citron",
             panuozzo_dolce_parma_desc: "Panuozzo napolitain garni de jambon de bœuf fondant, stracciatella crémeuse, gorgonzola, figues confites et roquette fraîche",
@@ -681,6 +741,11 @@
             pizza_al_tonno_title: "AL TONNO & CARAMELIZED ONIONS",
             pizza_al_tonno_desc: "San Marzano tomato base, fior di latte mozzarella, TAM ® tuna (one single-serve portion opened for each pizza), caramelized onions, capers and oregano",
             nav_panuozzos: "Panuozzos",
+            dips_heading: "Dips",
+            dips_hint: "to add, for the crusts",
+            dip_truffe: "Black truffle cream",
+            dip_pesto: "Pesto alla genovese",
+            dip_ricotta: "Ricotta cream",
             panuozzo_midi_note: "Served with chips and a drink. Also available on the <strong>lunch menu for 89 DH</strong>.",
             panuozzo_bresaola_desc: "Neapolitan panuozzo filled with delicately aged bresaola, creamy burrata stracciatella, fresh arugula, confit cherry tomatoes, parmesan and a touch of lemon",
             panuozzo_dolce_parma_desc: "Neapolitan panuozzo filled with tender beef ham, creamy stracciatella, gorgonzola, candied figs and fresh arugula",
@@ -719,6 +784,11 @@
             pizza_al_tonno_title: "AL TONNO & CIPOLLE CARAMELLATE",
             pizza_al_tonno_desc: "Base di pomodoro San Marzano, mozzarella fior di latte, tonno TAM ® (una dose monoporzione aperta per ogni pizza), cipolle caramellate, capperi e origano",
             nav_panuozzos: "Panuozzi",
+            dips_heading: "Dips",
+            dips_hint: "da aggiungere, per la crosta",
+            dip_truffe: "Crema di tartufo nero",
+            dip_pesto: "Pesto alla genovese",
+            dip_ricotta: "Crema di ricotta",
             panuozzo_midi_note: "Serviti con chips e bevanda. Disponibili anche nel <strong>menu pranzo a 89 DH</strong>.",
             panuozzo_bresaola_desc: "Panuozzo napoletano farcito con bresaola delicatamente stagionata, stracciatella di burrata cremosa, rucola fresca, pomodorini confit, parmigiano e un tocco di limone",
             panuozzo_dolce_parma_desc: "Panuozzo napoletano farcito con prosciutto di manzo fondente, stracciatella cremosa, gorgonzola, fichi canditi e rucola fresca",
@@ -757,6 +827,11 @@
             pizza_al_tonno_title: "AL TONNO & CEBOLLAS CARAMELIZADAS",
             pizza_al_tonno_desc: "Base de tomate San Marzano, mozzarella fior di latte, atún TAM ® (una dosis unitaria abierta para cada pizza), cebollas caramelizadas, alcaparras y orégano",
             nav_panuozzos: "Panuozzos",
+            dips_heading: "Dips",
+            dips_hint: "para añadir, para el borde",
+            dip_truffe: "Crema de trufa negra",
+            dip_pesto: "Pesto alla genovese",
+            dip_ricotta: "Crema de ricotta",
             panuozzo_midi_note: "Servidos con chips y bebida. También disponibles en el <strong>menú de mediodía a 89 DH</strong>.",
             panuozzo_bresaola_desc: "Panuozzo napolitano relleno de bresaola delicadamente curada, stracciatella de burrata cremosa, rúcula fresca, tomates cherry confitados, parmesano y un toque de limón",
             panuozzo_dolce_parma_desc: "Panuozzo napolitano relleno de jamón de buey tierno, stracciatella cremosa, gorgonzola, higos confitados y rúcula fresca",
@@ -795,6 +870,11 @@
             pizza_al_tonno_title: "AL TONNO & بصل مكرمل",
             pizza_al_tonno_desc: "قاعدة طماطم سان مارزانو، موزاريلا فيور دي لاتي، تونة TAM ® (حصة فردية تفتح لكل بيتزا)، بصل مكرمل، كبار وأوريغانو",
             nav_panuozzos: "بانوتزو",
+            dips_heading: "ديبس",
+            dips_hint: "للإضافة، لغمس الأطراف",
+            dip_truffe: "كريمة الترفل الأسود",
+            dip_pesto: "بيستو جنوي",
+            dip_ricotta: "كريمة ريكوتا",
             panuozzo_midi_note: "يُقدَّم مع رقائق بطاطس ومشروب. متوفرة أيضاً في <strong>قائمة الغداء بـ 89 درهماً</strong>.",
             panuozzo_bresaola_desc: "بانوتزو نابولي محشو ببريزاولا معتقة، ستراشياتيلا دي بوراتا كريمية، جرجير طازج، طماطم كرزية كونفي، بارميزان ولمسة ليمون",
             panuozzo_dolce_parma_desc: "بانوتزو نابولي محشو بجامبون بقري طري، ستراشياتيلا كريمية، غورغونزولا، تين معقّد وجرجير طازج",
