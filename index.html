@@ -202,6 +202,107 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.12);
             border: 2px solid #f1ece3;
             background: #fff;
+            cursor: zoom-in;
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+        .pizza-thumb:hover,
+        .pizza-thumb:focus-visible {
+            transform: scale(1.08);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+        }
+        .pizza-thumb:focus-visible {
+            outline: 2px solid #8B1E1E;
+            outline-offset: 3px;
+        }
+
+        .photo-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:
+                max(16px, env(safe-area-inset-top))
+                max(16px, env(safe-area-inset-right))
+                max(16px, env(safe-area-inset-bottom))
+                max(16px, env(safe-area-inset-left));
+            background: rgba(24, 18, 12, 0.78);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .photo-lightbox[hidden] { display: none !important; }
+        .photo-lightbox-card {
+            position: relative;
+            width: min(680px, 100%);
+            max-height: 100%;
+            overflow: auto;
+            background: #F7F5F0;
+            border-radius: 24px;
+            padding: 16px 16px 18px;
+            box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+            animation: photo-pop 0.22s ease;
+        }
+        .photo-lightbox-img {
+            width: 100%;
+            max-height: min(72vh, 680px);
+            object-fit: contain;
+            border-radius: 18px;
+            background: #fff;
+            display: block;
+        }
+        .photo-lightbox-caption {
+            font-family: 'Merriweather', 'Cairo', serif;
+            text-align: center;
+            margin: 14px 36px 2px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #1f1a16;
+        }
+        .photo-lightbox-close {
+            position: absolute;
+            top: 10px;
+            inset-inline-end: 10px;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: #fff;
+            color: #1f1a16;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .photo-lightbox-close:focus-visible {
+            outline: 2px solid #8B1E1E;
+            outline-offset: 3px;
+        }
+        body.photo-lightbox-open { overflow: hidden; }
+        @keyframes photo-pop {
+            from { opacity: 0; transform: translateY(10px) scale(0.98); }
+            to { opacity: 1; transform: none; }
+        }
+        @media (max-width: 768px) {
+            .photo-lightbox-card {
+                border-radius: 18px;
+                padding: 12px 12px 14px;
+            }
+            .photo-lightbox-img {
+                max-height: 62vh;
+                border-radius: 14px;
+            }
+            .photo-lightbox-caption {
+                font-size: 0.98rem;
+                margin-top: 12px;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .pizza-thumb,
+            .photo-lightbox-card { transition: none; animation: none; }
         }
         
         .footer-info {
@@ -669,6 +770,14 @@
     </footer>
 </div>
 
+<div id="photo-lightbox" class="photo-lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="photo-lightbox-caption">
+    <div class="photo-lightbox-card">
+        <button type="button" id="photo-lightbox-close" class="photo-lightbox-close" aria-label="Fermer">&times;</button>
+        <img id="photo-lightbox-img" class="photo-lightbox-img" alt="">
+        <p id="photo-lightbox-caption" class="photo-lightbox-caption"></p>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
@@ -909,6 +1018,53 @@
     });
 
     document.querySelector('[data-lang="fr"]').classList.add('active');
+
+    const photoLightbox = document.getElementById('photo-lightbox');
+    const photoLightboxImg = document.getElementById('photo-lightbox-img');
+    const photoLightboxCaption = document.getElementById('photo-lightbox-caption');
+    const photoLightboxClose = document.getElementById('photo-lightbox-close');
+    let photoLightboxLastFocus = null;
+
+    const openPhotoLightbox = (img) => {
+        photoLightboxLastFocus = document.activeElement;
+        photoLightboxImg.src = img.currentSrc || img.getAttribute('src');
+        photoLightboxImg.alt = img.alt || '';
+        photoLightboxCaption.textContent = img.alt || '';
+        photoLightbox.hidden = false;
+        document.body.classList.add('photo-lightbox-open');
+        photoLightboxClose.focus();
+    };
+
+    const closePhotoLightbox = () => {
+        if (photoLightbox.hidden) return;
+        photoLightbox.hidden = true;
+        photoLightboxImg.removeAttribute('src');
+        document.body.classList.remove('photo-lightbox-open');
+        if (photoLightboxLastFocus && typeof photoLightboxLastFocus.focus === 'function') {
+            photoLightboxLastFocus.focus();
+        }
+    };
+
+    document.querySelectorAll('.pizza-thumb').forEach((img) => {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.setAttribute('aria-haspopup', 'dialog');
+        img.addEventListener('click', () => openPhotoLightbox(img));
+        img.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openPhotoLightbox(img);
+            }
+        });
+    });
+
+    photoLightbox.addEventListener('click', (event) => {
+        if (event.target === photoLightbox) closePhotoLightbox();
+    });
+    photoLightboxClose.addEventListener('click', closePhotoLightbox);
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closePhotoLightbox();
+    });
 </script>
 </body>
 </html>
